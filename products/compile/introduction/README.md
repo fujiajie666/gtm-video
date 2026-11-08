@@ -2,7 +2,7 @@
 
 [观看介绍视频（MP4，55 秒）](./video.mp4)
 
-Compile 可以把分散的项目资料整理成 Wiki、知识图谱或报告。以 Wiki 为例，它按 Skill 定义的规则读取文档、会议记录和反馈，把同一主题的信息汇集到一页，并保留来源引用，方便读者核对原文。[Compile 介绍文档](https://docs.openviking.ai/zh/context-compilation/01-overview)
+Compile 可以把分散的项目资料整理成 Wiki 或报告。以 Wiki 为例，它按 Skill 定义的规则读取文档、会议记录和反馈，把同一主题的信息汇集到一页，并保留来源引用，方便读者核对原文。[Compile 介绍文档](https://docs.openviking.ai/zh/context-compilation/01-overview)
 
 ## 基本用法
 
