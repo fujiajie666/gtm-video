@@ -6,19 +6,19 @@ Compile 可以把分散的项目资料整理成 Wiki 或报告。以 Wiki 为例
 
 ## 基本用法
 
-下面以灯塔项目为例。先启用 Compile Runtime，导入示例资料并安装 LLM Wiki Skill。准备步骤见[上下文编译入门](https://docs.openviking.ai/zh/getting-started/13-compile)。
+要把自己的项目资料整理成 Wiki，先启用 Compile Runtime，将资料导入 OpenViking，并安装 LLM Wiki Skill。准备步骤见[上下文编译入门](https://docs.openviking.ai/zh/getting-started/13-compile)。
 
-指定来源目录、用于存放 Wiki 的新目录和整理资料的 Skill，然后提交任务。
+将下面的 `project-docs` 换成已导入的资料目录名，将 `project-wiki` 换成准备存放 Wiki 的新目录名。
 
 ```bash
-ov compile --from viking://resources/onboarding-zh-v1 \
-  --to viking://resources/onboarding-wiki-v1 \
+ov compile --from viking://resources/project-docs \
+  --to viking://resources/project-wiki \
   --skill viking://agent/skills/llm-wiki \
-  --instruction "请用中文生成 index.md 和灯塔项目页面，并在正文中引用原始资料的 viking:// URI。"
+  --instruction "请按主题整理这些资料，生成中文 Wiki，用 index.md 链接各主题页面，并在正文中引用原始资料的 viking:// URI。"
 ```
 
 用返回的任务 ID 查询进度，例如 `ov task status cmp_...`。状态变为 `completed` 后，打开 Wiki 首页即可按主题浏览。
 
 ```bash
-ov read viking://resources/onboarding-wiki-v1/index.md
+ov read viking://resources/project-wiki/index.md
 ```
